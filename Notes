@@ -1,0 +1,5 @@
+Task: need to configure CPanel git repository function which will push the code on the Filemanager.
+
+Point 01: In yml file we provide the path where we have to push the code, in the path we need to 
+take care of CP user name.
+
