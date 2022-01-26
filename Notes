@@ -3,3 +3,14 @@ Task: need to configure CPanel git repository function which will push the code 
 Point 01: In yml file we provide the path where we have to push the code, in the path we need to 
 take care of CP user name.
 
+==========================
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home/<username>/public_html/<app_folder>
+        - /bin/cp <file_name> $DEPLOYPATH #Copy specific file to destination from root
+        - /bin/cp /<sub_folder>/<file_name> $DEPLOYPATH #copy specific file from source sub folder
+        - /bin cp * $DEPLOYPATH #copy all from root 
+        - /bin cp /<sub_folder>/* $DEPLOYPATH #copy all from sub folder root
+        
+Ref:https://stackoverflow.com/questions/52688981/issues-with-the-format-of-cpanel-yml-file-when-trying-to-deploy-cpanel-git-repo        
+       
